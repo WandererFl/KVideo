@@ -903,7 +903,7 @@ Cloudflare Pages部署指南
 4. 配置环境变量（密码和订阅链接）
    - 在Settings里面找到**Variables and secrets**
    - 添加配置ACCESS_PASSWORD，密码自行填写
-   - 添加配置SUBSCRIPTION_SOURCES，地址为`.json`格式的文本，可直接使用![rapier15sapper](https://raw.githubusercontent.com/rapier15sapper/ew/refs/heads/main/test.json)
+   - 添加配置SUBSCRIPTION_SOURCES，地址为`.json`格式的文本，可直接使用[rapier15sapper](https://raw.githubusercontent.com/rapier15sapper/ew/refs/heads/main/test.json)
 5. 重新部署以生效配置
 
 #### 选项 4：Android TV APK 构建
