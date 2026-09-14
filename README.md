@@ -885,6 +885,27 @@ npm start
 7. **功能限制**：托管平台会自动禁用外部媒体代理和 IPTV 流中继；请仅使用允许浏览器直连、允许当前来源访问且具备合法授权的内容源。
 8. **如果你需要完整能力**：直接改用 Docker 或传统 Node.js 自托管，不要在托管平台上强行恢复这些能力。
 
+#### Cloudflare托管模式部署指南
+
+Cloudflare Pages部署指南
+
+1. 创建项目
+   点击访问Cloudflare Pages，连接Github后，选择KVideo项目，并点击Begin setup
+2. 配置构建参数
+   - 项目名称建议保持kvideo不变
+   - Framework Preset选择Next.js
+   - Build command输入`npm run pages:build`
+   - Build output directory输入`.vercel/output/static`
+   - 点击Save and Deploy
+3. 配置运行时参数
+   - 进入Settings，找到Runtime部分
+   - 找到**Compatibility flags**，添加`nodejs_compat`
+4. 配置环境变量（密码和订阅链接）
+   - 在Settings里面找到**Variables and secrets**
+   - 添加配置ACCESS_PASSWORD，密码自行填写
+   - 添加配置SUBSCRIPTION_SOURCES，地址为`.json`格式的文本，可直接使用![rapier15sapper](https://raw.githubusercontent.com/rapier15sapper/ew/refs/heads/main/test.json)
+5. 重新部署以生效配置
+
 #### 选项 4：Android TV APK 构建
 
 项目内置了一个轻量的 Android TV WebView 壳应用，可以将 KVideo 打包成 APK 安装到 Android TV 或机顶盒上。
@@ -1121,7 +1142,6 @@ KVideo v4.5.0+ 已增加多级回退机制，会依次尝试 HLS.js、原生 HLS
   如果这个项目对你有帮助，请考虑给一个 ⭐️
 </div>
 
-# Buy Me A Coffee
 # Buy Me A Coffee
 [![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=kuekhaoyang&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/kuekhaoyang)
 
